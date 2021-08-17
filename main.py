@@ -4,7 +4,7 @@ import pywhatkit
 browser = webdriver.Chrome()
 
 #Open Links
-sites = ['https://tecnoblog.net/','https://g1.globo.com/economia/tecnologia/','https://www.theverge.com/tech','https://www.cnbc.com/technology/','https://gadgets.ndtv.com/news',"https://www.cnet.com/news/"]
+sites = ['https://tecnoblog.net/','https://g1.globo.com/economia/tecnologia/','https://www.theverge.com/tech','https://www.cnbc.com/technology/','https://www.engadget.com/',"https://www.cnet.com/news/", "https://forbes.com.br/forbes-tech/"]
 pages = ['https://g1.globo.com/economia/tecnologia/noticia/2021/08/16/google-e-facebook-anunciam-plano-de-novo-cabo-de-internet-submarino-para-a-asia.ghtml','https://g1.globo.com/economia/agronegocios/agro-a-industria-riqueza-do-brasil/noticia/2021/08/17/de-onde-vem-o-que-eu-uso-cavalos-que-participam-da-producao-do-soro-anti-covid-comem-melaco-e-ate-escutam-musica-classica.ghtml', 'https://g1.globo.com/mg/minas-gerais/noticia/2021/08/17/afegao-que-vive-no-brasil-ha-6-anos-diz-que-esta-preocupado-com-familia-apos-dominio-do-taliba-queremos-paz.ghtml']
 browser.maximize_window()
 
