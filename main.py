@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import pywhatkit
 browser = webdriver.Chrome()
 
 #Open Links
@@ -12,7 +13,7 @@ browser.maximize_window()
 #Abrir links
 def abrir_site():
     i = 1
-    for site in pages:
+    for site in sites:
         browser.get(site)
         browser.execute_script("window.open()")
         browser.switch_to.window(browser.window_handles[i])
@@ -22,7 +23,7 @@ def abrir_site():
 #Get Noticias
 def get_news():
     i = 0
-    for g in range(1 + len(pages)):
+    for g in range(1 + len(sites)):
         #Get Window URL
         url = browser.current_url
         write_txt(url)
@@ -45,17 +46,25 @@ def write_txt(url):
 
 
 #SendWhats
+def send_whats():
+    news = open("news.txt","r")
+    tel_teste = "+5511988110909"
+    tel_fernando = "+5511988281642"
+    pywhatkit.sendwhatmsg_instantly(tel_teste,news,wait_time= 20)
 
 #Menu
 while True:
     x = int(input('''
     1 - Get Sites
     2 - Get News
+    3 - Send News
     0 - Exit
     Digite: '''))
     if x == 1:
         abrir_site()
     elif x == 2:
         get_news()
+    elif x == 3:
+        send_whats()
     elif x == 0:
         break
